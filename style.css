@@ -120,7 +120,7 @@ body {
     button:hover {
         color: rgb(254, 242, 225);
         text-shadow: 2px 2px 10px rgba(255, 231, 151, 0.635);
-        transform: translateX(-100px);
+        transform: translateX(-63px);
     }
 }
 
