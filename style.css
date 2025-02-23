@@ -28,7 +28,15 @@
   }
 @font-face {
     font-family: hyperlinkFont;
-    src: url("fonts/DePixelHalbfett.ttf");
+    src: url("fonts/DePixel-Bold.eot");
+    src: url("fonts/DePixel-Bold.eot?#iefix") format("embedded-opentype"),
+        url("fonts/DePixel-Bold.woff2") format("woff2"),
+        url("fonts/DePixel-Bold.woff") format("woff"),
+        url("fonts/DePixel-Bold.ttf") format("truetype"),
+        url("fonts/DePixel-Bold.svg#DePixel-Bold") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
 ::selection {
