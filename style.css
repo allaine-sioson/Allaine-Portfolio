@@ -14,15 +14,6 @@
 	--glow-size: 300px;
 }
 
-@font-face {
-    font-family: headerFont;
-    src: url(fonts/pixelpro-2p.ttf);
-  }
-@font-face {
-    font-family: hyperlinkFont;
-    src: url(fonts/DePixelHalbfett.ttf);
-}
-
 ::selection {
     background: var(--hightlight-color);
     color: var(--hightlight-text-color);
@@ -190,6 +181,7 @@ body {
     }
 }
 
+
 @keyframes glow-animation {
     0% { 
 		rotate: 0deg; 
@@ -220,4 +212,13 @@ body {
         transform: translateY(0px), scale(1) ;
     }
 
+}
+
+@font-face {
+    font-family: headerFont;
+    src: url(fonts/pixelpro-2p.ttf);
+  }
+@font-face {
+    font-family: hyperlinkFont;
+    src: url(fonts/DePixelHalbfett.ttf);
 }
