@@ -16,26 +16,11 @@
 
 @font-face {
     font-family: headerFont;
-    src: url('fonts/PixelPro2P.eot');
-    src: url('fonts/PixelPro2P.eot?#iefix') format('embedded-opentype'),
-        url('fonts/PixelPro2P.woff2') format('woff2'),
-        url('fonts/PixelPro2P.woff') format('woff'),
-        url('fonts/PixelPro2P.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
+    src: url(fonts/pixelpro-2p.ttf);
+  }
 @font-face {
     font-family: hyperlinkFont;
-    src: url('fonts/DePixel-Bold.eot');
-    src: url('fonts/DePixel-Bold.eot?#iefix') format('embedded-opentype'),
-        url('fonts/DePixel-Bold.woff2') format('woff2'),
-        url('fonts/DePixel-Bold.woff') format('woff'),
-        url('fonts/DePixel-Bold.ttf') format('truetype'),
-        url('fonts/DePixel-Bold.svg#DePixel-Bold') format('svg');
-    font-style: normal;
-    font-display: swap;
+    src: url(fonts/DePixelHalbfett.ttf);
 }
 
 ::selection {
