@@ -16,7 +16,15 @@
 
 @font-face {
     font-family: headerFont;
-    src: url("fonts/pixelpro-2p.ttf");
+    src: url("fonts/PixelPro2P.eot");
+    src: url("fonts/PixelPro2P.eot?#iefix") format("embedded-opentype"),
+        url("fonts/PixelPro2P.woff2") format("woff2"),
+        url("fonts/PixelPro2P.woff") format("woff"),
+        url("fonts/PixelPro2P.ttf") format("truetype"),
+        url("fonts/PixelPro2P.svg#PixelPro2P") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
   }
 @font-face {
     font-family: hyperlinkFont;
