@@ -3,8 +3,8 @@
     --subheader-color: rgba(244, 233, 218, 0.653);
     --regularfont-color: rgba(244, 233, 218, 0.6);
     
-    --hightlight-text-color: rgba(111, 28, 0, 0.649);
-    --hightlight-color: rgba(255, 254, 233, 0.912);
+    --highlight-text-color: rgba(111, 28, 0, 0.649);
+    --highlight-color: rgba(255, 254, 233, 0.912);
 
     --glow-color: linear-gradient(
 		to right,
@@ -13,6 +13,30 @@
 	);
 	--glow-size: 300px;
 }
+
+::-webkit-scrollbar {
+    background-color: #3b2924;
+}
+::-webkit-scrollbar-corner{
+    background-color: #3b2924;
+}
+::-webkit-scrollbar-thumb {
+    background: #d8b26046;
+    border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgb(0, 0, 0);
+    height:10px;
+    transition: all 0.5s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d8b260a9;
+    border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgb(0, 0, 0);
+    height:10px;
+    transition: all 0.5s ease;
+}
+  
+
 
 @font-face {
     font-family: headerFont;
@@ -40,8 +64,8 @@
 }
 
 ::selection {
-    background: var(--hightlight-color);
-    color: var(--hightlight-text-color);
+    background: var(--highlight-color);
+    color: var(--highlight-text-color);
 }
 
 button {
@@ -52,7 +76,6 @@ body {
     background-image: url("images/background.png");
     background-repeat: no-repeat;
     background-attachment:scroll;
-
 
     height: 100vh;
     cursor: url(images/cursor2.png), auto;
@@ -85,12 +108,22 @@ body {
     .right {
         grid-row-start: 1;
         grid-row-end: 40;
-        margin-right: 15%;
+        padding-top: 0%;
+        padding-bottom: 20%;
+        padding-right: 11%;
+        margin-right: 4%;
 
         height: fit-content;
         opacity: 0;
         transform: scale(0.9);
         transition: all 0.5s ease;
+    }
+    
+    .right.active {
+        opacity: 1;
+        transform: scale(1);
+        transition: all 0.5s ease;
+        overflow: auto;
     }
 
     .menu {
@@ -149,20 +182,21 @@ body {
     }
 }
 
-#profile:hover ~ .right {
+#profile:active ~ .right {
     opacity: 1;
     transform: scale(1);
 }
 
-#experiences:hover ~ .right {
+#experiences:active ~ .right {
     opacity: 1;
     transform: scale(1);
 }
 
-#projects:hover ~ .right {
+#projects:active ~ .right {
     opacity: 1;
     transform: scale(1);
 }
+
 
 .credits {
     position: fixed;
@@ -236,5 +270,4 @@ body {
     100% {
         transform: translateY(0px), scale(1) ;
     }
-
 }
