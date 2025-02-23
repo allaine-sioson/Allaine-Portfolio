@@ -16,12 +16,11 @@
 
 @font-face {
     font-family: headerFont;
-    src: url(/fonts/PixelPro2P.eot);
-    src: url(/fonts/PixelPro2P.eot?#iefix) format('embedded-opentype'),
-        url(/fonts/PixelPro2P.woff2) format('woff2'),
-        url(/fonts/PixelPro2P.woff) format('woff'),
-        url(/fonts/PixelPro2P.ttf) format('truetype'),
-        url(/fonts/PixelPro2P.svg#PixelPro2P) format('svg');
+    src: url('/fonts/PixelPro2P.eot');
+    src: url('/fonts/PixelPro2P.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/PixelPro2P.woff2') format('woff2'),
+        url('/fonts/PixelPro2P.woff') format('woff'),
+        url('/fonts/PixelPro2P.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -29,7 +28,15 @@
 
 @font-face {
     font-family: hyperlinkFont;
-    src: url(fonts/DePixelHalbfett.ttf);
+    src: url('DePixel-Bold.eot');
+    src: url('DePixel-Bold.eot?#iefix') format('embedded-opentype'),
+        url('DePixel-Bold.woff2') format('woff2'),
+        url('DePixel-Bold.woff') format('woff'),
+        url('DePixel-Bold.ttf') format('truetype'),
+        url('DePixel-Bold.svg#DePixel-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
 ::selection {
