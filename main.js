@@ -71,7 +71,7 @@ function displayProfile() {
         changeFontToHeaderStyle(text1);
         text1.style.fontSize = "200%";
         text1.innerHTML = "Hello! Welcome to my Portfolio.";
-        changeFontToRegularStyle(text2)
+        changeFontToRegularStyle(text2);
         text2.innerHTML = "My name is Allaine Sioson and I am an aspiring UI/UX Designer and App developer.<br><br>I currently have a couple projects that I am working on which you may find in the Projects section of this website.<br><br>Languages I use:";
 
         // Update image sources
@@ -90,9 +90,9 @@ function displayExperiences() {
     // Wait for fade-out to finish before showing new content
     setTimeout(() => {
         showInfo(); // Show the new section (fade-in)
-        changeFontToHeaderStyle(text1)
+        changeFontToHeaderStyle(text1);
         text1.innerHTML = "IOS App Developer<br>Career Education Council (Co-op)<br>Jul 2024 - Jul 2024";
-        changeFontToRegularStyle(text2)
+        changeFontToRegularStyle(text2);
         text2.style.marginLeft = "50px";
         text2.innerHTML = "I worked in the 'Develop The Future' program where I was tasked with completing various Swift playgrounds, creating wireframes and prototypes, researching different app concepts and creating an app pitch presentation at the end of the program. During my time at this placement, I have gained the skills to use the Swift programming language while simultaneously learning the XCode program.<br><br> Responsibilities :<br><br> - Attend daily meetings<br> - Complete weekly tasks assigned (e.g., Playgrounds, Apps, Planners)<br> - Participate in creative workshops<br> - Create wireframes<br> - Develop Apps";
 
