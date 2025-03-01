@@ -114,6 +114,10 @@ body {
     }
 }
 
+p {
+    width: 600px;
+}
+
 a:link {
     color: rgb(255, 223, 184);
 }
@@ -175,10 +179,6 @@ img {
     filter: drop-shadow(2px 2px 3px rgb(26, 20, 1));
     width: 75px;
     margin-left: 25px;
-}
-
-p {
-    width: 600px;
 }
 
 button {
