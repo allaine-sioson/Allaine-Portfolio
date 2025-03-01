@@ -197,16 +197,6 @@ button:hover {
     transform: scale(1);
 }
 
-.container .right #text2 {
-    margin-left: 10%;
-    margin-top: -12.5%;
-    font-family: headerFont;
-    color:rgb(254, 242, 225);
-    text-shadow: 2px 2px 5px rgb(40, 32, 2);
-    font-size: 165%;
-    overflow: auto;
-}
-
 img {
     filter: drop-shadow(2px 2px 3px rgb(26, 20, 1));
     width: 75px;

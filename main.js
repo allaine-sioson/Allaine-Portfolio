@@ -47,11 +47,19 @@ function showInfo() {
     right.classList.add('active');
 }
 
-function changeFontToHeaderStyle() {
-    text1.style.fontFamily = "headerFont";
-    text1.style.fontSize = "200%";
-    text1.style.color = "var(--header-color)";
-    text1.style.textShadow = "2px 2px 5px rgb(192, 148, 5)";
+function changeFontToHeaderStyle(text) {
+    text.style.fontFamily = "hyperlinkFont";
+    text.style.fontSize = "150%";
+    text.style.color = "var(--subheader-color)";
+    text.style.textShadow = "2px 2px 5px rgb(220, 176, 30), 2px 2px 5px rgb(40, 32, 2)";
+}
+
+function changeFontToRegularStyle(text) {
+    text.style.fontFamily = "headerFont";
+    text.style.fontSize = "200%";
+    text.style.color = "var(--header-color)";
+    text.style.textShadow = "2px 2px 5px rgb(192, 148, 5)";
+    text.style.marginLeft = "0px";
 }
 
 function displayProfile() {
@@ -60,10 +68,11 @@ function displayProfile() {
     // Wait for fade-out to finish before showing new content
     setTimeout(() => {
         showInfo(); // Show the new section (fade-in)
-        changeFontToHeaderStyle();
-        text1.innerHTML = "Hello! Welcome to my Portfolio.<br><br>My name is Allaine Sioson and I am an aspiring UI/UX Designer and App developer.<br><br>I currently have a couple projects that I am working on which you may find in the Projects section of this website.<br><br>Languages I use:";
-
-        text2.innerHTML = "";
+        changeFontToHeaderStyle(text1);
+        text1.style.fontSize = "200%";
+        text1.innerHTML = "Hello! Welcome to my Portfolio.";
+        changeFontToRegularStyle(text2)
+        text2.innerHTML = "My name is Allaine Sioson and I am an aspiring UI/UX Designer and App developer.<br><br>I currently have a couple projects that I am working on which you may find in the Projects section of this website.<br><br>Languages I use:";
 
         // Update image sources
         java.src = "images/java.png";
@@ -81,13 +90,11 @@ function displayExperiences() {
     // Wait for fade-out to finish before showing new content
     setTimeout(() => {
         showInfo(); // Show the new section (fade-in)
-        text1.style.fontFamily = "hyperlinkFont";
-        text1.style.fontSize = "150%";
-        text1.style.color = "var(--subheader-color)";
-        text1.style.textShadow = "2px 2px 5px rgb(192, 148, 5), 2px 2px 5px rgb(40, 32, 2)";
+        changeFontToHeaderStyle(text1)
         text1.innerHTML = "IOS App Developer<br>Career Education Council (Co-op)<br>Jul 2024 - Jul 2024";
-
-        text2.innerHTML = "<br><br>I worked in the 'Develop The Future' program where I was tasked with completing various Swift playgrounds, creating wireframes and prototypes, researching different app concepts and creating an app pitch presentation at the end of the program. During my time at this placement, I have gained the skills to use the Swift programming language while simultaneously learning the XCode program.<br><br> Responsibilities :<br><br> - Attend daily meetings<br> - Complete weekly tasks assigned (e.g., Playgrounds, Apps, Planners)<br> - Participate in creative workshops<br> - Create wireframes<br> - Develop Apps";
+        changeFontToRegularStyle(text2)
+        text2.style.marginLeft = "50px";
+        text2.innerHTML = "I worked in the 'Develop The Future' program where I was tasked with completing various Swift playgrounds, creating wireframes and prototypes, researching different app concepts and creating an app pitch presentation at the end of the program. During my time at this placement, I have gained the skills to use the Swift programming language while simultaneously learning the XCode program.<br><br> Responsibilities :<br><br> - Attend daily meetings<br> - Complete weekly tasks assigned (e.g., Playgrounds, Apps, Planners)<br> - Participate in creative workshops<br> - Create wireframes<br> - Develop Apps";
 
         // Remove image sources for experiences
         java.src = "";
@@ -105,7 +112,7 @@ function displayProjects() {
     // Wait for fade-out to finish before showing new content
     setTimeout(() => {
         showInfo(); // Show the new section (fade-in)
-        changeFontToHeaderStyle();
+        changeFontToRegularStyle(text1);
         text1.innerHTML = "Placeholder Text";
 
         text2.innerHTML = "";
