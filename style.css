@@ -116,6 +116,7 @@ body {
 
 p {
     width: 600px;
+    overflow-x: hidden;
 }
 
 a:link {
