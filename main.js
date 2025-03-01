@@ -1,5 +1,6 @@
 const profile = document.getElementById("profile");
 const experiences = document.getElementById("experiences");
+const awards = document.getElementById("awards");
 const projects = document.getElementById("projects");
 const credits = document.getElementById("credits");
 
