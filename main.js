@@ -56,7 +56,7 @@ function changeFontToHeaderStyle(text) {
 
 function changeFontToRegularStyle(text) {
     text.style.fontFamily = "headerFont";
-    text.style.fontSize = "200%";
+    text.style.fontSize = "175%";
     text.style.color = "var(--header-color)";
     text.style.textShadow = "2px 2px 5px rgb(192, 148, 5)";
     text.style.marginLeft = "0px";
@@ -72,7 +72,7 @@ function displayProfile() {
         text1.style.fontSize = "200%";
         text1.innerHTML = "Hello! Welcome to my Portfolio.";
         changeFontToRegularStyle(text2);
-        text2.innerHTML = "My name is Allaine Sioson and I am an aspiring UI/UX Designer and App developer.<br><br>I currently have a couple projects that I am working on which you may find in the Projects section of this website.<br><br>Languages I use:";
+        text2.innerHTML = "My name is Allaine Sioson and I am an aspiring UI/UX Designer and App developer.<br><br>I currently have a couple projects that I am working on which you may find in the Projects section of this website.<br><br>Languages I use:<br>";
 
         // Update image sources
         java.src = "images/java.png";
@@ -94,8 +94,29 @@ function displayExperiences() {
         text1.innerHTML = "IOS App Developer<br>Career Education Council (Co-op)<br>Jul 2024 - Jul 2024";
         changeFontToRegularStyle(text2);
         text2.style.marginLeft = "50px";
-        text2.innerHTML = "I worked in the 'Develop The Future' program where I was tasked with completing various Swift playgrounds, creating wireframes and prototypes, researching different app concepts and creating an app pitch presentation at the end of the program. During my time at this placement, I have gained the skills to use the Swift programming language while simultaneously learning the XCode program.<br><br> Responsibilities :<br><br> - Attend daily meetings<br> - Complete weekly tasks assigned (e.g., Playgrounds, Apps, Planners)<br> - Participate in creative workshops<br> - Create wireframes<br> - Develop Apps";
+        text2.innerHTML = "I worked in the 'Develop The Future' program where I was tasked with completing various Swift playgrounds, creating wire frames and prototypes, researching different app concepts and creating an app pitch presentation at the end of the program. During my time at this placement, I have gained the skills to use the Swift programming language while simultaneously learning the XCode program.<br><br> Responsibilities :<br><br> - Attend daily meetings<br> - Complete weekly tasks assigned (e.g., Playgrounds, Apps, Planners)<br> - Participate in creative workshops<br> - Create wire frames<br> - Develop Apps";
 
+        // Remove image sources for experiences
+        java.src = "";
+        python.src = "";
+        arduino.src = "";
+        html.src = "";
+        css.src = "";
+        js.src = "";
+    }, 500); // 500ms delay before the new content is displayed after fade-out
+}
+
+function displayAwards() {
+    hideInfo(); // Hide previous content
+
+    // Wait for fade-out to finish before showing new content
+    setTimeout(() => {
+        showInfo(); // Show the new section (fade-in)
+        changeFontToHeaderStyle(text1);
+        text1.innerHTML = "SKILLS Ontario (Regionals)<br>Coding Category: GOLD<br>Feb 26, 2025";
+        changeFontToRegularStyle(text2);
+        text2.style.marginLeft = "50px";
+        text2.innerHTML = "Create a program for managing accessibility devices (wheelchairs, braille, etc.)<br><br>Language Used: Java<br>Link To Program: <a href= https://github.com/allaine-sioson> Here! </a>";
         // Remove image sources for experiences
         java.src = "";
         python.src = "";
@@ -134,6 +155,10 @@ profile.addEventListener('click', () => {
 
 experiences.addEventListener('click', () => {
     displayExperiences();
+});
+
+awards.addEventListener('click', () => {
+    displayAwards();
 });
 
 projects.addEventListener('click', () => {
