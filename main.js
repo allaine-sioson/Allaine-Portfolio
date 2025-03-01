@@ -47,16 +47,20 @@ function showInfo() {
     right.classList.add('active');
 }
 
+function changeFontToHeaderStyle() {
+    text1.style.fontFamily = "headerFont";
+    text1.style.fontSize = "200%";
+    text1.style.color = "var(--header-color)";
+    text1.style.textShadow = "2px 2px 5px rgb(192, 148, 5)";
+}
+
 function displayProfile() {
     hideInfo(); // Hide previous content
 
     // Wait for fade-out to finish before showing new content
     setTimeout(() => {
         showInfo(); // Show the new section (fade-in)
-        text1.style.fontFamily = "headerFont";
-        text1.style.fontSize = "200%";
-        text1.style.color = "var(--header-color)";
-        text1.style.textShadow = "2px 2px 5px rgb(192, 148, 5)";
+        changeFontToHeaderStyle();
         text1.innerHTML = "Hello! Welcome to my Portfolio.<br><br>My name is Allaine Sioson and I am an aspiring UI/UX Designer and App developer.<br><br>I currently have a couple projects that I am working on which you may find in the Projects section of this website.<br><br>Languages I use:";
 
         text2.innerHTML = "";
@@ -101,10 +105,7 @@ function displayProjects() {
     // Wait for fade-out to finish before showing new content
     setTimeout(() => {
         showInfo(); // Show the new section (fade-in)
-        text1.style.fontFamily = "headerFont";
-        text1.style.fontSize = "200%";
-        text1.style.color = "var(--header-color)";
-        text1.style.textShadow = "2px 2px 5px rgb(192, 148, 5)";
+        changeFontToHeaderStyle();
         text1.innerHTML = "Placeholder Text";
 
         text2.innerHTML = "";
