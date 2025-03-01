@@ -34,7 +34,10 @@ document.body.onpointermove = event => {
 		fill: 'forwards'
 	});
 }
-// Function to hide the .right div (fade out and scale down)
+
+/**
+ * Hides the right side of the screen
+ */
 function hideInfo() {
     // Adding a small delay to allow the fade-out effect before the content is replaced
     right.classList.remove('active');
@@ -43,12 +46,17 @@ function hideInfo() {
     }, 200);  // 200ms delay before starting fade-out
 }
 
-// Function to activate the .right div with animation (fade in)
+/**
+ * Shows the right side of the screen
+ */
 function showInfo() {
     right.style.opacity = '1';  // Ensure opacity is 1 when showing content
     right.classList.add('active');
 }
 
+/**
+ * Shows the credits
+ */
 function showCredits() {
     if (right.style.opacity > 0) {
         hideInfo();
@@ -80,6 +88,9 @@ function showCredits() {
    
 }
 
+/**
+ * Hides the credits
+ */
 function hideCredits() {
     credits.style.opacity = "0.5";  // Start the fade-in by setting opacity to 1
     credits.style.scale = "1";
@@ -97,6 +108,10 @@ function hideCredits() {
     }, 500); // 500ms delay before the new content is displayed after fade-out
 }
 
+/**
+ * Changes the text's style to Header Style
+ * @param {Object} text 
+ */
 function changeFontToHeaderStyle(text) {
     text.style.fontFamily = "hyperlinkFont";
     text.style.fontSize = "150%";
@@ -104,6 +119,10 @@ function changeFontToHeaderStyle(text) {
     text.style.textShadow = "2px 2px 5px rgb(220, 176, 30), 2px 2px 5px rgb(40, 32, 2)";
 }
 
+/**
+ * Changes the text's style to Regular Style
+ * @param {Object} text 
+ */
 function changeFontToRegularStyle(text) {
     text.style.fontFamily = "headerFont";
     text.style.fontSize = "175%";
@@ -112,6 +131,9 @@ function changeFontToRegularStyle(text) {
     text.style.marginLeft = "0px";
 }
 
+/**
+ * Changes the right side of the screen's text to display profile info.
+ */
 function displayProfile() {
     hideInfo(); // Hide previous content
 
@@ -134,6 +156,9 @@ function displayProfile() {
     }, 500); // 500ms delay before the new content is displayed after fade-out
 }
 
+/**
+ * Changes the right side of the screen's text to display experiences info.
+ */
 function displayExperiences() {
     hideInfo(); // Hide previous content
 
@@ -156,6 +181,9 @@ function displayExperiences() {
     }, 500); // 500ms delay before the new content is displayed after fade-out
 }
 
+/**
+ * Changes the right side of the screen's text to display awards info.
+ */
 function displayAwards() {
     hideInfo(); // Hide previous content
 
@@ -177,6 +205,9 @@ function displayAwards() {
     }, 500); // 500ms delay before the new content is displayed after fade-out
 }
 
+/**
+ * Changes the right side of the screen's text to display projects info.
+ */
 function displayProjects() {
     hideInfo(); // Hide previous content
 
@@ -215,6 +246,7 @@ projects.addEventListener('click', () => {
     displayProjects();
 });
 
+// credits event listeners
 credits.addEventListener('mouseover', () => {
     showCredits();
 });
