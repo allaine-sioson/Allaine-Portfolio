@@ -3,8 +3,10 @@ const experiences = document.getElementById("experiences");
 const awards = document.getElementById("awards");
 const projects = document.getElementById("projects");
 const credits = document.getElementById("credits");
+const creditsbox = document.getElementById("credits-box");
 
 const bg = document.getElementById("main");
+const overlay = document.getElementById("overlay");
 
 const text1 = document.getElementById("text1");
 const text2 = document.getElementById("text2");
@@ -45,6 +47,54 @@ function hideInfo() {
 function showInfo() {
     right.style.opacity = '1';  // Ensure opacity is 1 when showing content
     right.classList.add('active');
+}
+
+function showCredits() {
+    if (right.style.opacity > 0) {
+        hideInfo();
+
+        setTimeout(() => {
+            credits.style.opacity = "1";  // Start the fade-in by setting opacity to 1
+            credits.style.scale = "1.25";
+            credits.style.transition = "all 0.5s ease";  // Smooth fade-in effect
+    
+            creditsbox.style.opacity = "1";  // Start the fade-in by setting opacity to 1
+            creditsbox.style.transition = "all 0.5s ease";  // Smooth fade-in effect
+    
+            overlay.style.display = "block";  
+            overlay.style.opacity = "1";// Start the fade-in by setting opacity to 1
+            overlay.style.transition = "all 0.5s ease";  // Smooth fade-in effect
+        }, 500); // 500ms delay before the new content is displayed after fade-out
+    } else {
+        credits.style.opacity = "1";  // Start the fade-in by setting opacity to 1
+        credits.style.scale = "1.25";
+        credits.style.transition = "all 0.5s ease";  // Smooth fade-in effect
+
+        creditsbox.style.opacity = "1";  // Start the fade-in by setting opacity to 1
+        creditsbox.style.transition = "all 0.5s ease";  // Smooth fade-in effect
+
+        overlay.style.display = "block";  
+        overlay.style.opacity = "1";// Start the fade-in by setting opacity to 1
+        overlay.style.transition = "all 0.5s ease";  // Smooth fade-in effect
+    }
+   
+}
+
+function hideCredits() {
+    credits.style.opacity = "0.5";  // Start the fade-in by setting opacity to 1
+    credits.style.scale = "1";
+    credits.style.transition = "all 0.5s ease";  // Smooth fade-in effect
+
+    creditsbox.style.opacity = "0";  // Start the fade-out by setting opacity to 0
+    creditsbox.style.transition = "all 0.5s ease";  // Smooth fade-out effect
+
+    overlay.style.display = "none";  // Start the fade-out by setting opacity to 0
+    overlay.style.opacity = "0";  // Start the fade-out by setting opacity to 0
+    overlay.style.transition = "all 0.5s ease";  // Smooth fade-out effect
+
+    setTimeout(() => {
+        showInfo();
+    }, 500); // 500ms delay before the new content is displayed after fade-out
 }
 
 function changeFontToHeaderStyle(text) {
@@ -163,4 +213,12 @@ awards.addEventListener('click', () => {
 
 projects.addEventListener('click', () => {
     displayProjects();
+});
+
+credits.addEventListener('mouseover', () => {
+    showCredits();
+});
+
+credits.addEventListener('mouseout', () => {
+    hideCredits();
 });
