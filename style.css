@@ -85,8 +85,7 @@ body {
     background-image: url("images/background.png");
     background-repeat: no-repeat;
     background-attachment:scroll;
-
-    height: 100vh;
+    height: 100px;
     cursor: url(images/cursor2.png), auto;
 }
 
@@ -132,7 +131,7 @@ a:visited {
     margin-right: 4%;
     margin-left: 1%;
 
-    height: 80vh;
+    height: 560px;
     opacity: 0;
     transform: scale(0.9);
     position: relative;
@@ -172,6 +171,16 @@ h3:hover {
     text-shadow: 2px 2px 10px rgba(255, 231, 151, 0.635);
 }
 
+img {
+    filter: drop-shadow(2px 2px 3px rgb(26, 20, 1));
+    width: 75px;
+    margin-left: 25px;
+}
+
+p {
+    width: 600px;
+}
+
 button {
     color: var(--regular-font-color);
     background-color: transparent;
@@ -196,13 +205,6 @@ button:hover {
     text-shadow: 2px 2px 10px rgba(255, 231, 151, 0.635);
     transform: translateX(-100px);
 }
-
-img {
-    filter: drop-shadow(2px 2px 3px rgb(26, 20, 1));
-    width: 75px;
-    margin-left: 25px;
-}
-
 
 #credits {
     position: absolute;
