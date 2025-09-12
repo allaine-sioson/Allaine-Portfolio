@@ -103,6 +103,17 @@ function displayRightSideText(id) {
             const workContent2 = document.createElement("h2");
             workContent2.innerHTML = "I worked in the \"Develop The Future\" program where I was tasked with completing various Swift playgrounds, creating wireframes and prototypes, researching different app concepts and creating an app pitch presentation at the end of the program.<br><br>Responsibilities : <br>- Attend daily meetings <br>- Complete weekly tasks assigned (e.g. Playgrounds, Apps, Planners) <br>- Participate in creative workshops <br>- Create wireframes <br>- Develop Apps";
             rightSide.appendChild(workContent2);
+
+            // socials title
+            const socialsTitle = document.createElement("h1");
+            socialsTitle.innerHTML = "Socials";
+            rightSide.appendChild(socialsTitle);
+
+            // socials info
+            const socialsInfo = document.createElement("h2");
+            socialsInfo.innerHTML = "> linkedin: <a href= https://www.linkedin.com/in/allainesioson/> @Allaine Sioson </a><br>> github: <a href= https://github.com/allaine-sioson> @allaine-sioson </a>";
+            rightSide.appendChild(socialsInfo);
+
             
         } else if (id === "competitions") {
             console.log(id);
@@ -114,7 +125,7 @@ function displayRightSideText(id) {
 
             // competition info
             const competitionInfo1 = document.createElement("h2");
-            competitionInfo1.innerHTML = "> Create a program for managing accessibility devices (wheelchairs, braille, etc.)<br><br>Language Used: Java<br>Link To Program: <a href= https://github.com/allaine-sioson> Here! </a>";
+            competitionInfo1.innerHTML = "> Create a program for managing accessibility devices (wheelchairs, braille, etc.)<br><br>Language Used: Java<br>Link To Program: <a href= https://github.com/allaine-sioson/Skills-Regionals-2025> Here! </a>";
             rightSide.appendChild(competitionInfo1);
 
             // competition title 2
