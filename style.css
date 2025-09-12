@@ -1,17 +1,16 @@
 :root {
-    --header-color: rgb(254, 242, 225);
-    --subheader-color: rgba(255, 238, 215, 0.75);
-    --regular-font-color: rgba(244, 233, 218, 0.6);
+    --light-beige: rgb(254, 242, 225);
+    --regular-font-color: rgba(245, 219, 183, 0.75);
     
     --highlight-text-color: rgba(111, 28, 0, 0.649);
     --highlight-color: rgba(255, 254, 233, 0.912);
 
     --glow-color: linear-gradient(
 		to right,
-		rgb(243, 165, 70),
-		rgb(255, 218, 70)
+		rgba(243, 165, 70, 0.45),
+		rgb(255, 218, 70, 0.45)
 	);
-	--glow-size: 300px;
+	--glow-size: 20vw;
 }
 
 html {
@@ -19,7 +18,7 @@ html {
 }
 
 @font-face {
-    font-family: headerFont;
+    font-family: pixelFont;
     src: url("fonts/PixelPro2P.eot");
     src: url("fonts/PixelPro2P.eot?#iefix") format("embedded-opentype"),
         url("fonts/PixelPro2P.woff2") format("woff2"),
@@ -31,7 +30,7 @@ html {
     font-display: swap;
   }
 @font-face {
-    font-family: hyperlinkFont;
+    font-family: regFont;
     src: url("fonts/DePixel-Bold.eot");
     src: url("fonts/DePixel-Bold.eot?#iefix") format("embedded-opentype"),
         url("fonts/DePixel-Bold.woff2") format("woff2"),
@@ -45,6 +44,7 @@ html {
 
 ::-webkit-scrollbar {
     background-color: #3b2924;
+    border-radius: 15px;
 }
 ::-webkit-scrollbar-corner{
     background-color: #3b2924;
@@ -86,13 +86,14 @@ body {
 #left {
     display: grid;
     grid-template-columns: auto;
+    align-content: start;
     padding-left: 7.5vw;
     padding-top: 3.5vw;
 }
 
 #left h1 {
-    font-family: headerFont;
-    color: var(--header-color);
+    font-family: pixelFont;
+    color: var(--light-beige);
     font-size: 5vw;
     animation: colorChange 4s infinite;
 }
@@ -110,7 +111,7 @@ body {
     background-color: transparent;
     border: none;
     text-shadow: 2px 2px 5px rgb(192, 148, 5);
-    font-family: hyperlinkFont;
+    font-family: regFont;
     font-size: 1.75vw;
     transition: all 0.5s ease 0s;
     text-align: left;
@@ -118,22 +119,61 @@ body {
 }
 
 #right {
-    display: flex;
-    font-family: hyperlinkFont;
-    color: var(--subheader-color);
-    text-shadow: 2px 2px 5px rgb(192, 148, 5);
-    padding: 5%;
+    height: 100%;
 }
 
-/* img {
-    filter: drop-shadow(2px 2px 3px rgb(26, 20, 1));
-    width: 75px;
-} */
+#right-container {
+    display: grid;
+    background-color: rgb(2, 2, 1, 0.35);
+    box-shadow: 2px 2px 2px rgba(180, 170, 138, 0.5);
+    border-radius: 15px;
+    grid-template-columns: auto;
+    margin-top: 4vw;
+    margin-right: 2.5vw;
+    padding: 2vw;
+    opacity: 0;
+    height: 40vw;          
+    overflow-x: hidden; 
+    overflow-y: auto;
+    align-content: start;
+    transition: opacity 0.75s;
+}
+
+#right-container.open {
+    opacity: 1;
+}
+
+#right-container * {
+    z-index: 3;
+}
+
+#right-container h1 {
+    font-family: regFont;
+    color: var(--light-beige);
+    text-shadow: 3px 3px 5px rgb(35, 14, 2);
+    font-size: 2.75vw;
+    animation: sizePulse 7.5s infinite;
+}
+
+#right-container h1:hover {
+    color: var(--light-beige);
+}
+
+#right-container h2 {
+    font-family: pixelFont;
+    color: var(--regular-font-color);
+    text-shadow: 2px 2px 5px rgb(54, 38, 5);
+    font-size: 2.25vw;
+}
+
+a {
+    color: var(--highlight-color);
+}
 
 #credits {
     position: absolute;
-    bottom:0px;
-    opacity:0.25;
+    bottom: 0px;
+    opacity: 0.25;
     transform: scale(0.7);
 }
 
@@ -164,21 +204,23 @@ body {
 	top: 50%;
 	translate: -50% -50%;
 	border-radius: 50%;
+    z-index: 2;
 }
 
 @keyframes glow-animation {
-    0%{rotate: 0deg; transform: scale(0.75);}
+    0%{rotate: 0deg; transform: scale(0.5);}
 	50%{rotate: 180deg; transform: scale(1);}
-	100%{rotate: 360deg; transform: scale(0.75);}
+	100%{rotate: 360deg; transform: scale(0.5);}
 }
 
 @keyframes colorChange {
-    100%{text-shadow: 0px 0px 5px rgba(192, 148, 5, 0.552), 2px 2px 2.5px rgb(40, 32, 2);}
-    50%{text-shadow: 0px 0px 15px rgba(240, 192, 34, 0.513), 2px 2px 2.5px rgb(40, 32, 2);}
-    0%{text-shadow: 0px 0px 5px rgba(192, 148, 5, 0.552), 2px 2px 2.5px rgb(40, 32, 2);}
+    100%{text-shadow: 0px 0px 5px rgba(192, 148, 5, 0.352), 2px 2px 2.5px rgb(40, 32, 2);}
+    50%{text-shadow: 0px 0px 15px rgba(240, 192, 34, 0.313), 2px 2px 2.5px rgb(40, 32, 2);}
+    0%{text-shadow: 0px 0px 5px rgba(192, 148, 5, 0.352), 2px 2px 2.5px rgb(40, 32, 2);}
 }
 
-@keyframes fadeIn {
-    0%{transform: translateY(-50px), scale(0.9);}
-    100%{transform: translateY(0px), scale(1);}
+@keyframes sizePulse {
+    0%{transform: scale(1);}
+	50%{transform: scale(1.025);}
+	100%{transform: scale(1);}
 }
