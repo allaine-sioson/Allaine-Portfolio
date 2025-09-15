@@ -62,7 +62,7 @@ function displayRightSideText(id) {
             rightSide.appendChild(content1);
 
             // imgs
-            const images = ["images/arduino.png", "images/css.png", "images/html.png", "images/java.png", "images/js.png", "images/python.png"];
+            const images = ["images/arduino.png", "images/html.png","images/css.png", "images/js.png","images/java.png", "images/python.png"];
 
             const imagesContainer = document.createElement("div");
             imagesContainer.style.marginLeft= "auto";
